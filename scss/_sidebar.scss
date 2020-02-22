@@ -1,0 +1,25 @@
+.sidebar {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 732px;
+    display: grid;    
+    grid-template: 2fr 1fr 1fr / 1fr;
+
+    .hamburger {
+        max-height: 24px;
+    }
+
+    #header {
+        transform: rotate(270deg);
+        width: 10px;
+        height: 110px;
+        margin-left: 1.5em;
+        color: $sidebar-color;
+    }
+    
+    #search {
+        color: $sidebar-color;
+        font-size: 1.5em;
+        align-self: end;
+    }
+}

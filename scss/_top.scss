@@ -1,0 +1,7 @@
+@import "sidebar";
+@import "slider";
+
+.top {
+    display: grid;
+    grid-template: 35px 732px 1fr / 55px 70px 1fr 55px;
+}

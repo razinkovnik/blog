@@ -1,0 +1,48 @@
+#slider {
+    background-image: url('../images/main.png');
+    grid-row: 2/3;
+    grid-column: 3/4;
+    display: grid;
+    grid-template: 200px 100px 100px 240px 35px 1fr / 30px 70px 30px 1fr;
+
+    .signature {
+        grid-row: 4/5;
+        grid-column: 4/5;
+        align-self: end;
+        color: white;
+        font-size: 2em;
+        transform: rotate(270deg) translate(100px, -100px);
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .slogan {
+        align-self: end;
+        grid-column: 3/5;
+        color: white;
+        font-size: 4em;
+        font-weight: 400;
+
+        &.line1 {
+            grid-row: 1/2;
+            transform: translate(-44px);
+        }
+
+        &.line2 {
+            grid-row: 2/3;
+            font-weight: 1000;
+        }
+
+        &.line3 {
+            grid-row: 3/4;
+        }
+    }
+
+    .scroll {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 400;
+        grid-column: 1/5;
+        justify-self: center;
+    }
+}
