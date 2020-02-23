@@ -8,9 +8,9 @@ module.exports = {
       ]
     },
     css: [
-        'css/normalize.css',
-        'css/hamburgers.css',
-        'css/fontawesome.css',
-        { src: 'scss/main', lang: 'scss' },
+        'static/css/normalize.css',
+        'static/css/hamburgers.css',
+        'static/css/fontawesome.css',
+        { src: '~assets/scss/main', lang: 'scss' },
     ]
   }
