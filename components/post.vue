@@ -1,0 +1,24 @@
+<template lang="pug">
+    .post(:class="direction")
+        img(:src="pic", :alt="image")
+        .post__text                        
+            h2 {{title}}
+            span.data {{author}}
+            a.link(href="#") Discover more
+        .post__background
+</template>
+
+<script>
+export default {
+    name: 'post',
+    props: ["title", "author", "image", "id"],
+    computed: {
+        pic: function() {
+            return `images/${this.image}`
+        },
+        direction: function() {
+            return this.id % 2 == 0 ? "left" : "right"
+        }
+    }
+}
+</script>
