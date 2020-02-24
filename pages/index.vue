@@ -9,7 +9,7 @@
             include ../pugs/sidebar.pug
             include ../pugs/slider.pug
         .feed
-            post-item(v-for="item in feed" :id="item.id" :title="item.title" :author="item.author" :image="item.image" :key="item.id")
+            post-item(v-for="(post, index) in posts" :id="index" :title="post.attributes.title" :author="post.attributes.author" :image="post.attributes.image" :key="index" :path="getPermalink(post)")
         .load
             include ../pugs/load.pug
         .footer
@@ -18,13 +18,26 @@
 
 <script>
 import PostItem from "../components/post.vue"
-import feed from "../content/headers.json"
+
 export default {
     components: {
         'post-item': PostItem
     },
-    data() {
-        return { feed }
+    async asyncData() {
+        const resolve = require.context("~/content/", true, /\.md$/);
+        const imports = resolve.keys().map(key => {
+        const [name] = key.match(/\/(.+)\.md$/);
+        return resolve(key);
+        })
+        const zip = resolve.keys().map((e, i) => ({path: e, ...imports[i]}))
+        return {
+            posts: zip
+        }
+    },
+    methods: {
+        getPermalink(post) {
+            return "/posts/" + post.path.split('\\').pop().split('/').pop().split('.')[0]
+        }
     }
 }
 </script>

@@ -1,7 +1,7 @@
 ---
-title: Exploring visual trends in  contemporaneity
-author: by Jessica, 5 Jan 2017
-image: post1.png
+title: We worked with our client to build the story
+author: by Hezy, 5 Dec 2016
+image: post4.png
 ---
 
 Hey Everyone, this is simple a test blog post to show you

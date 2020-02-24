@@ -1,7 +1,7 @@
 ---
-title: Exploring visual trends in  contemporaneity
-author: by Jessica, 5 Jan 2017
-image: post1.png
+title: Art trends in the publicity
+author: by Hezy, 30 Dec 2016
+image: post2.png
 ---
 
 Hey Everyone, this is simple a test blog post to show you

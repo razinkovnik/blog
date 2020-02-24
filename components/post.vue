@@ -4,14 +4,14 @@
         .post__text                        
             h2 {{title}}
             span.data {{author}}
-            a.link(href="#") Discover more
+            a.link(:href="path") Discover more
         .post__background
 </template>
 
 <script>
 export default {
     name: 'post',
-    props: ["title", "author", "image", "id"],
+    props: ["title", "author", "image", "id", "path"],
     computed: {
         pic: function() {
             return `images/${this.image}`
