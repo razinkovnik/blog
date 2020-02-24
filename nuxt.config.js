@@ -1,3 +1,5 @@
+const path = require("path");
+
 export default {
   head: {
     script: [
@@ -12,5 +14,15 @@ export default {
       'static/css/hamburgers.css',
       'static/css/fontawesome.css',
       { src: '~assets/scss/main', lang: 'scss' },
-  ]
+  ],
+  build: {
+    extend(config, ctx) {
+      // add frontmatter-markdown-loader
+      config.module.rules.push({
+        test: /\.md$/,
+        include: path.resolve(__dirname, "content"),
+        loader: "frontmatter-markdown-loader",
+      });
+    }
+  }
 }

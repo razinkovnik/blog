@@ -18,18 +18,13 @@
 
 <script>
 import PostItem from "../components/post.vue"
+import feed from "../content/headers.json"
 export default {
     components: {
         'post-item': PostItem
     },
     data() {
-        return { 
-            feed: [
-                { id: 0, title: 'Exploring visual  trends in  contemporaneity', author: 'by Jessica, 5 Jan 2017', image: 'post1.png' },
-                { id: 1, title: 'Art trends in the publicity', author: 'by Hezy, 30 Dec 2016', image: 'post2.png' },
-                { id: 2, title: 'What makes a  truly great and creative logo?', author: 'by Jessica, 7Dec 2016', image: 'post3.png' },
-                { id: 3, title: 'We worked with  our client to  build the story', author: 'by Hezy, 5 Dec 2016', image: 'post4.png' },
-        ]}
+        return { feed }
     }
 }
 </script>
