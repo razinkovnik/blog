@@ -1,8 +1,4 @@
 - var title = "Subtlety";
-- var slogan_line_1 = '" Be Honest'
-- var slogan_line_2 = "with yourself,"
-- var slogan_line_3 = "be free!"
-- var signature_text = "*yours Hezy"
 
 <!DOCTYPE html>
 html(lang="en")
@@ -11,17 +7,15 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Document
-        link(rel="stylesheet", href="css/main.min.css")
-        link(rel="stylesheet", href="css/normalize.css")
-        link(rel="stylesheet", href="css/hamburgers.css")
-        link(rel="stylesheet", href="css/fontawesome.css")
+        link(rel="stylesheet", href="assets/css/main.min.css")
+        link(rel="stylesheet", href="static/css/normalize.css")
+        link(rel="stylesheet", href="static/css/hamburgers.css")
+        link(rel="stylesheet", href="static/css/fontawesome.css")
         link(href='https://fonts.googleapis.com/css?family=Fira+Sans&display=swap' rel='stylesheet')
     body
-        .page
-            .top
+        .page            
+            .post
                 include pugs/sidebar.pug
-                include pugs/slider.pug
-            .load
-                include pugs/load.pug
+                include pugs/post.pug
             .footer
                 include pugs/footer.pug

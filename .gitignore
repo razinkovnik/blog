@@ -2,3 +2,4 @@ node_modules
 *.html
 .nuxt
 package-lock.json
+assets/css

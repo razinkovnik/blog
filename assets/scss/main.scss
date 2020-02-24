@@ -19,3 +19,54 @@ body {
     margin: auto;
     min-height: 100vh;    
 }
+
+.post {
+    display: grid;
+    grid-template: 584px 1fr 40px auto / 155px 800px 100px 1fr;
+    margin-top: 35px;
+
+    .sidebar {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    img.slider {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        width: 900px;
+        height: 584px;
+        z-index: 100;
+    }
+
+    .author {
+        grid-column: 3/5;
+        grid-row: 1/3;
+        background-color: $background-color;     
+        margin-top: 35px;   
+        
+        span {
+            position: relative;
+            top: calc(584px - 135px);
+            left: 80px;
+            display: inline-block;
+            transform: rotate(270deg);
+            font-size: 1.2em;
+            font-weight: 200;
+        }
+    }
+
+    .title {
+        grid-column: 2/3;
+        grid-row: 2/4;
+        font-size: 1.2em;
+
+        h1 {
+            width: 470px;
+            line-height: 1.5em;
+        }
+    }
+
+    .text {
+        grid-column: 2/3;
+    }
+}
