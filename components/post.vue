@@ -1,6 +1,6 @@
 <template lang="pug">
     .post(:class="direction")
-        img(:src="pic", :alt="image")
+        img(:src="image", :alt="image")
         .post__text                        
             h2 {{title}}
             span.data {{author}}
@@ -13,9 +13,6 @@ export default {
     name: 'post',
     props: ["title", "author", "image", "id", "path"],
     computed: {
-        pic: function() {
-            return `images/${this.image}`
-        },
         direction: function() {
             return this.id % 2 == 0 ? "left" : "right"
         }
